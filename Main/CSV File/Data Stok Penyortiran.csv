@@ -1,1 +1,2 @@
-ID,Tanggal,Berat Stok Gudang,Status Stok Gudang
+ID,Tanggal,Berat Stok Penyortiran,Status Stok Penyortiran
+123, 22/03/22, 10000, Delivered

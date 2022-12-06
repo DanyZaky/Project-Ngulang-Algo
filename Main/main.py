@@ -28,17 +28,23 @@ class RunSystem():
             self.tempData = {}
             self.tempInputData = []
             self.tempVarData = []
+            systemUI.clearScreen()
+
             self.inputMainMenu = str(input(systemUI.mainMenu))
+            systemUI.clearScreen()
 
             if(self.inputMainMenu == "1"):
                 while (self.subMenuIsRunning == True):
                     self.mpIsRunning = True
                     self.inputSubMenu = str(input(systemUI.selectCRUD))
+                    systemUI.clearScreen()
 
                     if (self.inputSubMenu == "1"):
                         while (self.mpIsRunning == True):
                             mp.readData(getData.dataAdminDirectory)
                             self.inputMP = str(input(systemUI.backPanel))
+                            systemUI.clearScreen()
+
                             if (self.inputMP == "1"):
                                 self.mpIsRunning = False
                             else:
@@ -51,6 +57,7 @@ class RunSystem():
                             
                             for i in range(0, len(self.tempVarData)):
                                 self.tempInputData[i] = str(input("Masukkan " + self.tempVarData[i] + ": "))
+                                systemUI.clearScreen()
 
                             self.tempData = {
                                 'ID' : [self.tempInputData[0]],
@@ -64,6 +71,8 @@ class RunSystem():
                             print("Data berhasil ditambahkan!")
 
                             self.inputMP = str(input(systemUI.backPanel))
+                            systemUI.clearScreen()
+
                             if (self.inputMP == "1"):
                                 self.mpIsRunning = False
                             else:
@@ -74,6 +83,7 @@ class RunSystem():
                             
                             mp.readData(getData.dataAdminDirectory)
                             self.inputRowDelete = int(input(systemUI.delete))
+                            systemUI.clearScreen()
                             
                             mp.deleteData(getData.dataAdminDirectory, int(self.inputRowDelete))
                             mp.readData(getData.dataAdminDirectory)
@@ -95,11 +105,14 @@ class RunSystem():
                 while (self.subMenuIsRunning == True):
                     self.mpIsRunning = True
                     self.inputSubMenu = str(input(systemUI.selectCRUD))
+                    systemUI.clearScreen()
 
                     if (self.inputSubMenu == "1"):
                         while (self.mpIsRunning == True):
                             mp.readData(getData.dataLapPengeluaranDirectory)
                             self.inputMP = str(input(systemUI.backPanel))
+                            systemUI.clearScreen()
+
                             if (self.inputMP == "1"):
                                 self.mpIsRunning = False
                             else:
@@ -112,6 +125,7 @@ class RunSystem():
                             
                             for i in range(0, len(self.tempVarData)):
                                 self.tempInputData[i] = str(input("Masukkan " + self.tempVarData[i] + ": "))
+                                systemUI.clearScreen()
 
                             self.tempData = {
                                 'Nomor Transaksi' : [self.tempInputData[0]],
@@ -126,6 +140,8 @@ class RunSystem():
                             print("Data berhasil ditambahkan!")
 
                             self.inputMP = str(input(systemUI.backPanel))
+                            systemUI.clearScreen()
+
                             if (self.inputMP == "1"):
                                 self.mpIsRunning = False
                             else:
@@ -136,12 +152,15 @@ class RunSystem():
                             
                             mp.readData(getData.dataLapPengeluaranDirectory)
                             self.inputRowDelete = int(input(systemUI.delete))
+                            systemUI.clearScreen()
                             
                             mp.deleteData(getData.dataLapPengeluaranDirectory, int(self.inputRowDelete))
                             mp.readData(getData.dataLapPengeluaranDirectory)
                             print("Data berhasil dihapus!")
 
                             self.inputMP = str(input(systemUI.backPanel))
+                            systemUI.clearScreen()
+
                             if (self.inputMP == "1"):
                                 self.mpIsRunning = False
                             else:
@@ -157,11 +176,14 @@ class RunSystem():
                 while (self.subMenuIsRunning == True):
                     self.mpIsRunning = True
                     self.inputSubMenu = str(input(systemUI.selectCRUD))
+                    systemUI.clearScreen()
 
                     if (self.inputSubMenu == "1"):
                         while (self.mpIsRunning == True):
                             mp.readData(getData.dataLapPenjualanDirectory)
                             self.inputMP = str(input(systemUI.backPanel))
+                            systemUI.clearScreen()
+
                             if (self.inputMP == "1"):
                                 self.mpIsRunning = False
                             else:
@@ -174,6 +196,7 @@ class RunSystem():
                             
                             for i in range(0, len(self.tempVarData)):
                                 self.tempInputData[i] = str(input("Masukkan " + self.tempVarData[i] + ": "))
+                                systemUI.clearScreen()
 
                             self.tempData = {
                                 'Nomor Transaksi' : [self.tempInputData[0]],
@@ -188,6 +211,8 @@ class RunSystem():
                             print("Data berhasil ditambahkan!")
 
                             self.inputMP = str(input(systemUI.backPanel))
+                            systemUI.clearScreen()
+
                             if (self.inputMP == "1"):
                                 self.mpIsRunning = False
                             else:
@@ -198,12 +223,15 @@ class RunSystem():
                             
                             mp.readData(getData.dataLapPenjualanDirectory)
                             self.inputRowDelete = int(input(systemUI.delete))
+                            systemUI.clearScreen()
                             
                             mp.deleteData(getData.dataLapPenjualanDirectory, int(self.inputRowDelete))
                             mp.readData(getData.dataLapPenjualanDirectory)
                             print("Data berhasil dihapus!")
 
                             self.inputMP = str(input(systemUI.backPanel))
+                            systemUI.clearScreen()
+
                             if (self.inputMP == "1"):
                                 self.mpIsRunning = False
                             else:
@@ -219,11 +247,14 @@ class RunSystem():
                 while (self.subMenuIsRunning == True):
                     self.mpIsRunning = True
                     self.inputSubMenu = str(input(systemUI.selectCRUD))
+                    systemUI.clearScreen()
 
                     if (self.inputSubMenu == "1"):
                         while (self.mpIsRunning == True):
                             mp.readData(getData.dataStokGudangDirectory)
                             self.inputMP = str(input(systemUI.backPanel))
+                            systemUI.clearScreen()
+
                             if (self.inputMP == "1"):
                                 self.mpIsRunning = False
                             else:
@@ -236,6 +267,7 @@ class RunSystem():
                             
                             for i in range(0, len(self.tempVarData)):
                                 self.tempInputData[i] = str(input("Masukkan " + self.tempVarData[i] + ": "))
+                                systemUI.clearScreen()
 
                             self.tempData = {
                                 'ID' : [self.tempInputData[0]],
@@ -249,6 +281,8 @@ class RunSystem():
                             print("Data berhasil ditambahkan!")
 
                             self.inputMP = str(input(systemUI.backPanel))
+                            systemUI.clearScreen()
+
                             if (self.inputMP == "1"):
                                 self.mpIsRunning = False
                             else:
@@ -265,6 +299,8 @@ class RunSystem():
                             print("Data berhasil dihapus!")
 
                             self.inputMP = str(input(systemUI.backPanel))
+                            systemUI.clearScreen()
+
                             if (self.inputMP == "1"):
                                 self.mpIsRunning = False
                             else:
@@ -280,11 +316,14 @@ class RunSystem():
                 while (self.subMenuIsRunning == True):
                     self.mpIsRunning = True
                     self.inputSubMenu = str(input(systemUI.selectCRUD))
+                    systemUI.clearScreen()
 
                     if (self.inputSubMenu == "1"):
                         while (self.mpIsRunning == True):
                             mp.readData(getData.dataStokPenyortirannDirectory)
                             self.inputMP = str(input(systemUI.backPanel))
+                            systemUI.clearScreen()
+
                             if (self.inputMP == "1"):
                                 self.mpIsRunning = False
                             else:
@@ -297,6 +336,7 @@ class RunSystem():
                             
                             for i in range(0, len(self.tempVarData)):
                                 self.tempInputData[i] = str(input("Masukkan " + self.tempVarData[i] + ": "))
+                                systemUI.clearScreen()
 
                             self.tempData = {
                                 'ID' : [self.tempInputData[0]],
@@ -310,6 +350,8 @@ class RunSystem():
                             print("Data berhasil ditambahkan!")
 
                             self.inputMP = str(input(systemUI.backPanel))
+                            systemUI.clearScreen()
+
                             if (self.inputMP == "1"):
                                 self.mpIsRunning = False
                             else:
@@ -320,12 +362,15 @@ class RunSystem():
                             
                             mp.readData(getData.dataStokPenyortirannDirectory)
                             self.inputRowDelete = int(input(systemUI.delete))
+                            systemUI.clearScreen()
                             
                             mp.deleteData(getData.dataStokPenyortirannDirectory, int(self.inputRowDelete))
                             mp.readData(getData.dataStokPenyortirannDirectory)
                             print("Data berhasil dihapus!")
 
                             self.inputMP = str(input(systemUI.backPanel))
+                            systemUI.clearScreen()
+
                             if (self.inputMP == "1"):
                                 self.mpIsRunning = False
                             else:
@@ -341,11 +386,14 @@ class RunSystem():
                 while (self.subMenuIsRunning == True):
                     self.mpIsRunning = True
                     self.inputSubMenu = str(input(systemUI.selectCRUD))
+                    systemUI.clearScreen()
 
                     if (self.inputSubMenu == "1"):
                         while (self.mpIsRunning == True):
                             mp.readData(getData.dataStokProdukJadiDirectory)
                             self.inputMP = str(input(systemUI.backPanel))
+                            systemUI.clearScreen()
+
                             if (self.inputMP == "1"):
                                 self.mpIsRunning = False
                             else:
@@ -358,6 +406,7 @@ class RunSystem():
                             
                             for i in range(0, len(self.tempVarData)):
                                 self.tempInputData[i] = str(input("Masukkan " + self.tempVarData[i] + ": "))
+                                systemUI.clearScreen()
 
                             self.tempData = {
                                 'ID' : [self.tempInputData[0]],
@@ -373,6 +422,8 @@ class RunSystem():
                             print("Data berhasil ditambahkan!")
 
                             self.inputMP = str(input(systemUI.backPanel))
+                            systemUI.clearScreen()
+
                             if (self.inputMP == "1"):
                                 self.mpIsRunning = False
                             else:
@@ -383,12 +434,15 @@ class RunSystem():
                             
                             mp.readData(getData.dataStokProdukJadiDirectory)
                             self.inputRowDelete = int(input(systemUI.delete))
+                            systemUI.clearScreen()
                             
                             mp.deleteData(getData.dataStokProdukJadiDirectory, int(self.inputRowDelete))
                             mp.readData(getData.dataStokProdukJadiDirectory)
                             print("Data berhasil dihapus!")
 
                             self.inputMP = str(input(systemUI.backPanel))
+                            systemUI.clearScreen()
+                            
                             if (self.inputMP == "1"):
                                 self.mpIsRunning = False
                             else:
